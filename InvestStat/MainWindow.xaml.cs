@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InvestStat.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,10 @@ namespace InvestStat
         public MainWindow()
         {
             InitializeComponent();
-
+            using(var cont= new CompanyContext())
+            {
+                var result= cont.Companies.FirstOrDefault();
+            }
         }
     }
 }

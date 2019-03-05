@@ -12,6 +12,10 @@ namespace InvestStat.Context
         {
 
         }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Company>();
+        }
 
     }
 }

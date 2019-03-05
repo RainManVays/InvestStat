@@ -95,6 +95,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Context\CompanyContext.cs" />
+    <Compile Include="DataAccess.cs" />
     <Compile Include="DbWorker\InitDb.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -102,6 +103,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="model\Company.cs" />
     <Compile Include="model\CompanyFinancialDataOriginals.cs" />
     <Compile Include="model\CompanyFinancialInformation.cs" />
@@ -130,6 +132,9 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="stat.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
