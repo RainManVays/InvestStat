@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InvestStat.model
 {
@@ -10,5 +6,12 @@ namespace InvestStat.model
     {
         public int CompanyId { get; set; }
         public DateTime ActualYear { get; set; }
+        public decimal Assets { get; set; }
+        public decimal Liabilities { get; set; }
+        public decimal Earnings { get; set; }
+        public decimal Price { get; set; }
+        public decimal Sales { get; set; }
+        public decimal BookValue { get; set; }
+        public decimal EnterpriseValue { get; set; }
     }
 }

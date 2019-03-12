@@ -1,4 +1,5 @@
 ﻿using InvestStat.Context;
+using InvestStat.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,13 +22,51 @@ namespace InvestStat
     /// </summary>
     public partial class MainWindow : Window
     {
+        CreateCompany _createCompany = new CreateCompany();
+        WindowSWOT _WindowSWOT = new WindowSWOT();
         public MainWindow()
         {
             InitializeComponent();
-            using(var cont= new CompanyContext())
+
+            Refresh();
+        }
+
+        private void Refresh()
+        {
+            using (var cont = new CompanyContext())
             {
-                var result= cont.Companies.FirstOrDefault();
+                var result = cont.Companies.ToList();
+                if (result != null)
+                {
+                    listBox_companies.ItemsSource = result;
+                }
             }
+        }
+        private void Button_CreateCompany_Click(object sender, RoutedEventArgs e)
+        {
+            if(!_createCompany.IsVisible)
+                _createCompany.Show();
+
+        }
+
+        private void Button_DeleteCompany_Click(object sender, RoutedEventArgs e)
+        {
+            if(listBox_companies.SelectedIndex != -1)
+            {
+                Company selectedCompany = (Company)listBox_companies.SelectedItem;
+                using(var context=new CompanyContext())
+                {
+                    context.Companies.Remove(context.Companies.Find(selectedCompany.Id));
+                    context.SaveChanges();
+                }
+                Refresh();
+            }
+        }
+
+        private void Button_SWOTcompany_Click(object sender, RoutedEventArgs e)
+        {
+            if (!_WindowSWOT.IsVisible)
+                _WindowSWOT.Show();
         }
     }
 }

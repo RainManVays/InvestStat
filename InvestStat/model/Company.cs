@@ -9,7 +9,9 @@ namespace InvestStat.model
         [Required]
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime BaseDate { get; set; }
+        public string ShortName { get; set; }
+        public string BaseDate { get; set; }
         public Industry Industry { get; set; }
     }
 }
+ 

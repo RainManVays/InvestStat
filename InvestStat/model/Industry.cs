@@ -2,6 +2,6 @@
 {
     enum Industry
     {
-        Bank
+        Bank, Defense, Agriculture
     }
 }

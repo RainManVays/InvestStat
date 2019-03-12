@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InvestStat.model
+﻿namespace InvestStat.model
 {
     class CompanySWOT
     {
+        public int CompanyId { get; set; }
+        public string Strengths { get; set; }
+        public string Weaknesses { get; set; }
+        public string Opportunities { get; set; }
+        public string Threats { get; set; }
     }
 }
