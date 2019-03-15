@@ -11,18 +11,30 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
 
         mc:Ignorable="d"
-        Title="WindowSWOT" Height="900" Width="1200">
+        Title="WindowSWOT" Height="940" Width="1200">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="35" Margin="23,354,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="23,10,0,0" TextWrapping="Wrap" Text="Strengths" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.511,0.523" Foreground="#DDDE1A1A"/>
-        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="350" Margin="609,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="609,10,0,0" TextWrapping="Wrap" Text="Weaknesses" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.511,0.523" Foreground="#DD228B1D"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="350" Margin="23,444,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="23,414,0,0" TextWrapping="Wrap" Text="Opportunities" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.511,0.523" Foreground="#DD1414D8"/>
-        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="350" Margin="609,444,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550"/>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="609,414,0,0" TextWrapping="Wrap" Text="Threats" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="#DD9FB41E"/>
-        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="1054,819,0,0" VerticalAlignment="Top" Width="105" Height="34" Background="#FF3AB73A" BorderBrush="#FF5CB73A"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="310" Margin="23,39,0,0" VerticalAlignment="Top" Width="550"/>
+        <TextBox x:Name="textBox_Strengths" HorizontalAlignment="Left" Height="35" Margin="29,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="29,50,0,0" TextWrapping="Wrap" Text="Strengths" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.511,0.523" Foreground="#DDDE1A1A"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="615,50,0,0" TextWrapping="Wrap" Text="Weaknesses" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.511,0.523" Foreground="#DD228B1D"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="29,466,0,0" TextWrapping="Wrap" Text="Opportunities" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.511,0.523" Foreground="#DD1414D8"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="615,466,0,0" TextWrapping="Wrap" Text="Threats" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="#DD9FB41E"/>
+        <Button x:Name="button_Save" Content="Save" HorizontalAlignment="Left" Margin="1060,859,0,-4" VerticalAlignment="Top" Width="105" Height="34" Background="#FF3AB73A" BorderBrush="#FF5CB73A" Click="Button_Save_Click"/>
+        <ListBox x:Name="listBox_Strengths"  HorizontalAlignment="Left" Height="300" Margin="29,79,0,0" VerticalAlignment="Top" Width="550"/>
+        <Button x:Name="button_addStrengths" Content="Add" HorizontalAlignment="Left" Margin="27,424,0,0" VerticalAlignment="Top" Width="75" Click="Button_addStrengths_Click"/>
+        <Button x:Name="button_delStrengths" Content="Del" HorizontalAlignment="Left" Margin="107,424,0,0" VerticalAlignment="Top" Width="75" Click="Button_delStrengths_Click"/>
+        <TextBox x:Name="textBox_Opportunities" HorizontalAlignment="Left" Height="35" Margin="29,798,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550"/>
+        <ListBox x:Name="listBox_Opportunities" HorizontalAlignment="Left" Height="300" Margin="29,493,0,0" VerticalAlignment="Top" Width="550"/>
+        <Button x:Name="button_addOpportunities" Content="Add" HorizontalAlignment="Left" Margin="27,838,0,0" VerticalAlignment="Top" Width="75" Click="Button_addOpportunities_Click"/>
+        <Button x:Name="button_delOpportunities" Content="Del" HorizontalAlignment="Left" Margin="107,838,0,0" VerticalAlignment="Top" Width="75" Click="Button_delOpportunities_Click"/>
+        <TextBox x:Name="textBox_Threats" HorizontalAlignment="Left" Height="35" Margin="616,798,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550"/>
+        <ListBox x:Name="listBox_Threats" HorizontalAlignment="Left" Height="300" Margin="616,493,0,0" VerticalAlignment="Top" Width="550"/>
+        <Button x:Name="button_addThreats" Content="Add" HorizontalAlignment="Left" Margin="614,838,0,0" VerticalAlignment="Top" Width="75" Click="Button_addThreats_Click"/>
+        <Button x:Name="button_delThreats" Content="Del" HorizontalAlignment="Left" Margin="694,838,0,0" VerticalAlignment="Top" Width="75" Click="Button_delThreats_Click"/>
+        <TextBox x:Name="textBox_Weaknesses" HorizontalAlignment="Left" Height="35" Margin="616,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550"/>
+        <ListBox x:Name="listBox_Weaknesses" HorizontalAlignment="Left" Height="300" Margin="616,79,0,0" VerticalAlignment="Top" Width="550"/>
+        <Button x:Name="button_addWeaknesses" Content="Add" HorizontalAlignment="Left" Margin="614,424,0,0" VerticalAlignment="Top" Width="75" Click="Button_addWeaknesses_Click"/>
+        <Button x:Name="button_delWeaknesses" Content="Del" HorizontalAlignment="Left" Margin="694,424,0,0" VerticalAlignment="Top" Width="75" Click="Button_delWeaknesses_Click"/>
+        <TextBlock x:Name="textBlock_CompanyName" HorizontalAlignment="Left" Margin="468,10,0,0" TextWrapping="Wrap" Text="CompanyName" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.511,0.523" Foreground="#DD000000" Width="247" TextAlignment="Center"/>
 
     </Grid>
 </Window>

@@ -13,5 +13,6 @@ namespace InvestStat.model
         public decimal Sales { get; set; }
         public decimal BookValue { get; set; }
         public decimal EnterpriseValue { get; set; }
+        public byte[] Docs { get; set; }
     }
 }

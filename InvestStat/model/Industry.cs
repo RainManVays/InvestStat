@@ -1,6 +1,6 @@
 ﻿namespace InvestStat.model
 {
-    enum Industry
+   public enum Industry
     {
         Bank, Defense, Agriculture
     }

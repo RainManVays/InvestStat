@@ -86,6 +86,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Context\CompanySWOTContext.cs" />
     <Compile Include="WindowSWOT.xaml.cs">
       <DependentUpon>WindowSWOT.xaml</DependentUpon>
     </Compile>

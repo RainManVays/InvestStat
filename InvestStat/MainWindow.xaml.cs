@@ -23,7 +23,7 @@ namespace InvestStat
     public partial class MainWindow : Window
     {
         CreateCompany _createCompany = new CreateCompany();
-        WindowSWOT _WindowSWOT = new WindowSWOT();
+        WindowSWOT _WindowSWOT;
         public MainWindow()
         {
             InitializeComponent();
@@ -65,8 +65,15 @@ namespace InvestStat
 
         private void Button_SWOTcompany_Click(object sender, RoutedEventArgs e)
         {
-            if (!_WindowSWOT.IsVisible)
-                _WindowSWOT.Show();
+            using(var context = new CompanySWOTContext())
+            {
+                var currentCompany = (Company)listBox_companies.SelectedItem;
+                var result = context.CompanySWOT.FirstOrDefault(x => x.CompanyId == currentCompany.Id);
+                _WindowSWOT = new WindowSWOT(currentCompany,result);
+                if (!_WindowSWOT.IsVisible)
+                    _WindowSWOT.Show();
+            }
+            
         }
     }
 }
